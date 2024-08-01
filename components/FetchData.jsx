@@ -10,9 +10,9 @@ function FetchData({ imageUrl }) {
     async function fetchData() {
       try {
         const response = await fetch(
-          `${
-            process.env.NEXT_PUBLIC_LOCAL_HOST
-          }/api/generate?imageUrl=${encodeURIComponent(imageUrl)}`
+          `${process.env.LOCAL_HOST}/api/generate?imageUrl=${encodeURIComponent(
+            imageUrl
+          )}`
         );
 
         if (!response.ok) {
